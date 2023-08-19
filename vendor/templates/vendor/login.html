@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Вход |{% endblock %}
+
+    {% block content %}
+        <h1 class="title">Вход</h1>
+        <form method="post" action=".">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <div class="field">
+                <div class="control">
+                    <button type="submit" class="button is-ghost is-uppercase mt-5">
+                        Вход
+                    </button>
+                </div>
+            </div>
+        </form>
+    {% endblock %}
